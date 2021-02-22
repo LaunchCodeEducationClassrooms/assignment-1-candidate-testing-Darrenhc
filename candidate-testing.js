@@ -3,7 +3,7 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName = "";
+let candidateName="";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
@@ -23,12 +23,11 @@ let result = "";
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("Please Enter Your Name; ");
+
 } 
-
-
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-for (i = 0; i < questions.length; i++) {
+  for (i = 0; i < questions.length; i++) {
   candidateAnswers[i] = input.question(questions[i]);
   console.log(`Your Answer: ${candidateAnswers[i]} `);
   console.log(`Correct Answer: ${correctAnswers[i]} \n`);
@@ -48,7 +47,6 @@ function gradeQuiz(candidateAnswers) {
   }
    
  }
-
 let grade;
 
 grade = (totalGrade / questions.length) * 100;
@@ -63,7 +61,9 @@ if (grade >= 80) {
  console.log(`>>> Status: ${result} <<< `);
   
 
- return grade;
+
+
+return grade;
 }
 
 function runProgram() {
